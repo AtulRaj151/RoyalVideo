@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style data-vite-theme="" data-inject-first="">:root {
+      --background: 0 0% 100%;
+--foreground: 20 14.3% 4.1%;
+--muted: 60 4.8% 95.9%;
+--muted-foreground: 25 5.3% 44.7%;
+--popover: 0 0% 100%;
+--popover-foreground: 20 14.3% 4.1%;
+--card: 0 0% 100%;
+--card-foreground: 20 14.3% 4.1%;
+--border: 20 5.9% 90%;
+--input: 20 5.9% 90%;
+--primary: 345 72% 45%;
+--primary-foreground: 357 83% 99%;
+--secondary: 60 4.8% 95.9%;
+--secondary-foreground: 24 9.8% 10%;
+--accent: 60 4.8% 95.9%;
+--accent-foreground: 24 9.8% 10%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 60 9.1% 97.8%;
+--ring: 20 14.3% 4.1%;
+--radius: 0.5rem;
+  }
+  .dark {
+      --background: 240 10% 3.9%;
+--foreground: 0 0% 98%;
+--muted: 240 3.7% 15.9%;
+--muted-foreground: 240 5% 64.9%;
+--popover: 240 10% 3.9%;
+--popover-foreground: 0 0% 98%;
+--card: 240 10% 3.9%;
+--card-foreground: 0 0% 98%;
+--border: 240 3.7% 15.9%;
+--input: 240 3.7% 15.9%;
+--primary: 345 72% 45%;
+--primary-foreground: 357 83% 99%;
+--secondary: 240 3.7% 15.9%;
+--secondary-foreground: 0 0% 98%;
+--accent: 240 3.7% 15.9%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--ring: 240 4.9% 83.9%;
+--radius: 0.5rem;
+  }</style>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Royal Videography - Professional Wedding Photography & Videography Services</title>
+    <meta name="description" content="Royal Videography - Premium Wedding Photography and Videography Services in Dehri-on-Sone, Bihar by Ajay Sharma" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+    <!-- Open Graph Meta Tags for better social media sharing -->
+    <meta property="og:title" content="Royal Videography - Wedding Photography & Videography">
+    <meta property="og:description" content="Professional photography and videography services by Ajay Sharma and Raja Sharma in Dehri-on-Sone, Bihar">
+    <meta property="og:image" content="/og-image.jpg">
+    <meta property="og:url" content="https://royalvideography.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Animation Styles -->
+    <style>
+      /* Fade In Animation */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      .animate-fade-in {
+        animation: fadeIn 0.3s ease-in-out forwards;
+      }
+      
+      /* Fade In Down Animation */
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .animate-fade-in-down {
+        animation: fadeInDown 0.3s ease-in-out forwards;
+      }
+      
+      /* Scroll animations */
+      .scroll-animation {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      
+      .scroll-animation.animate {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-Cw_BILsU.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DfEEdV2P.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+    
+    <!-- Script for scroll animations -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const scrollAnimations = document.querySelectorAll('.scroll-animation');
+        
+        const checkScroll = () => {
+          scrollAnimations.forEach(animation => {
+            const offsetTop = animation.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (offsetTop < windowHeight * 0.9) {
+              animation.classList.add('animate');
+            }
+          });
+        };
+        
+        // Initial check
+        checkScroll();
+        
+        // Check on scroll
+        window.addEventListener('scroll', checkScroll);
+      });
+    </script>
+    
+    <!-- Optional: Add a loading indicator that gets removed when the app is ready -->
+    <script>
+      window.addEventListener('load', function() {
+        // You could add code here to remove a loading spinner if needed
+        document.body.classList.add('loaded');
+      });
+    </script>
+  </body>
+</html>

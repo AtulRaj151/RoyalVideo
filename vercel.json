@@ -16,7 +16,12 @@
   "github": {
     "silent": true
   },
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/public",
   "env": {
-    "VITE_STRIPE_PUBLIC_KEY": "@vite_stripe_public_key"
+    "VITE_STRIPE_PUBLIC_KEY": {
+      "type": "string",
+      "required": false
+    }
   }
 }

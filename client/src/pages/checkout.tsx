@@ -6,7 +6,18 @@ import { useQuery } from "@tanstack/react-query";
 import { apiRequest, queryClient } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { formatPrice, getCurrentUser } from "@/lib/utils";
-import { packages } from "@/data/packages"; // Import directly from the data file
+// Import directly from the data file with type assertion
+import { packages } from "@/data/packages"; 
+
+// Define interfaces to match the packages data structure
+interface PackageData {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  features: string[];
+  isPopular: boolean;
+}
 
 import {
   Card,
@@ -20,10 +31,16 @@ import { Button } from "@/components/ui/button";
 
 // Make sure to call `loadStripe` outside of a component's render to avoid
 // recreating the `Stripe` object on every render.
-if (!import.meta.env.VITE_STRIPE_PUBLIC_KEY) {
-  throw new Error('Missing required Stripe key: VITE_STRIPE_PUBLIC_KEY');
+let stripePromise: Promise<any> | null = null;
+try {
+  if (import.meta.env.VITE_STRIPE_PUBLIC_KEY) {
+    stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+  } else {
+    console.warn('Stripe key missing: VITE_STRIPE_PUBLIC_KEY is not set. Payment features will be limited.');
+  }
+} catch (error) {
+  console.error('Failed to initialize Stripe:', error);
 }
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 
 // Define simple types for our data (instead of importing from schema)
 interface Package {
@@ -153,7 +170,7 @@ export default function Checkout() {
 
   useEffect(() => {
     if (bookingData) {
-      setBooking(bookingData);
+      setBooking(bookingData as Booking);
     } else {
       // For demo purposes, create a temporary booking if none found
       const demoBooking: Booking = {
@@ -172,15 +189,15 @@ export default function Checkout() {
   useEffect(() => {
     if (booking) {
       // Find the package in our local data
-      const pkg = packages.find(p => p.id === booking.packageId);
+      const pkg = packages.find((p: any) => p.id === booking.packageId) as Package;
       if (pkg) {
         setPackageDetails(pkg);
       } else {
         // Fallback to API query
         queryClient.fetchQuery({
           queryKey: [`/api/packages/${booking.packageId}`],
-        }).then(data => {
-          setPackageDetails(data);
+        }).then((data: any) => {
+          setPackageDetails(data as Package);
         }).catch(err => {
           console.error("Failed to load package details:", err);
         });
@@ -260,9 +277,35 @@ export default function Checkout() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Elements stripe={stripePromise} options={{ clientSecret }}>
-                  <CheckoutForm booking={booking} packageDetails={packageDetails} />
-                </Elements>
+                {stripePromise ? (
+                  <Elements stripe={stripePromise} options={{ clientSecret }}>
+                    <CheckoutForm booking={booking} packageDetails={packageDetails} />
+                  </Elements>
+                ) : (
+                  <div className="p-4 text-center">
+                    <p className="text-yellow-600 mb-3">
+                      <i className="fas fa-exclamation-triangle mr-2"></i>
+                      Payment system is currently unavailable
+                    </p>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Please contact us directly to complete your booking:
+                    </p>
+                    <div className="space-y-2 text-sm">
+                      <p>
+                        <i className="fas fa-phone mr-2"></i>
+                        <a href="tel:+918083437728" className="text-primary hover:underline">
+                          +91 8083437728
+                        </a>
+                      </p>
+                      <p>
+                        <i className="fas fa-phone mr-2"></i>
+                        <a href="tel:+918340608143" className="text-primary hover:underline">
+                          +91 8340608143
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                )}
               </CardContent>
             </Card>
           </div>
