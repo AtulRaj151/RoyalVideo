@@ -90,7 +90,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
           </div>
           <div>
             <span className={logoClasses}>
-              Vivah<span className={logoSpanClasses}>Lens</span>
+              Royal <span className={logoSpanClasses}>Videography</span>
             </span>
           </div>
         </Link>
@@ -234,7 +234,7 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
                 <i className="fas fa-camera-retro text-xl"></i>
               </div>
               <span className="font-display text-2xl font-bold text-primary">
-                Vivah<span className="text-secondary">Lens</span>
+                Royal <span className="text-secondary">Videography</span>
               </span>
             </Link>
             <button 
@@ -293,10 +293,13 @@ export default function Navbar({ isMenuOpen, setIsMenuOpen }: NavbarProps) {
           {/* Mobile Contact Info */}
           <div className="mt-8 pt-6 border-t border-gray-100">
             <div className="flex items-center text-sm text-gray-500 mb-2">
-              <i className="fas fa-phone mr-3 text-secondary"></i> +91 98765 43210
+              <i className="fas fa-phone mr-3 text-secondary"></i> +91 8083437728, +91 8340608143
             </div>
             <div className="flex items-center text-sm text-gray-500">
-              <i className="fas fa-envelope mr-3 text-secondary"></i> info@vivahlens.com
+              <i className="fas fa-envelope mr-3 text-secondary"></i> royalvideography@gmail.com
+            </div>
+            <div className="flex items-center text-sm text-gray-500 mt-2">
+              <i className="fas fa-user mr-3 text-secondary"></i> Owner: Ajay Sharma
             </div>
             
             {/* Social Media Icons */}

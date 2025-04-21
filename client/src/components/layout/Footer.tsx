@@ -58,7 +58,7 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-display text-2xl font-bold text-white">
-                  Vivah<span className="text-secondary">Lens</span>
+                  Royal <span className="text-secondary">Videography</span>
                 </span>
               </div>
             </div>
@@ -197,15 +197,15 @@ export default function Footer() {
                 <div className="mt-1 mr-3 h-8 w-8 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <i className="fas fa-map-marker-alt text-secondary"></i>
                 </div>
-                <span className="text-gray-300">123 Wedding Street, Mumbai, Maharashtra, India - 400001</span>
+                <span className="text-gray-300">Dehri-on-Sone, Bihar, India</span>
               </li>
               <li className="flex items-start">
                 <div className="mt-1 mr-3 h-8 w-8 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
                   <i className="fas fa-phone-alt text-secondary"></i>
                 </div>
                 <div>
-                  <p className="text-gray-300">+91 98765 43210</p>
-                  <p className="text-gray-300">+91 98765 43211</p>
+                  <p className="text-gray-300">+91 8083437728</p>
+                  <p className="text-gray-300">+91 8340608143</p>
                 </div>
               </li>
               <li className="flex items-start">
@@ -213,8 +213,8 @@ export default function Footer() {
                   <i className="fas fa-envelope text-secondary"></i>
                 </div>
                 <div>
-                  <p className="text-gray-300">info@vivahlens.com</p>
-                  <p className="text-gray-300">bookings@vivahlens.com</p>
+                  <p className="text-gray-300">royalvideography@gmail.com</p>
+                  <p className="text-gray-300">ajay.sharma@royalvideo.com</p>
                 </div>
               </li>
               <li className="flex items-start">
@@ -241,8 +241,8 @@ export default function Footer() {
         {/* Copyright and Policy Links */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left mb-4 md:mb-0">
-            <p className="text-gray-400 text-sm">© {new Date().getFullYear()} VivahLens. All rights reserved.</p>
-            <p className="text-gray-500 text-xs mt-1">Capturing Wedding Memories Across India</p>
+            <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Royal Videography. All rights reserved.</p>
+            <p className="text-gray-500 text-xs mt-1">Owner: Ajay Sharma | Photographers: Raja Sharma, Ajay Sharma</p>
           </div>
           
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
