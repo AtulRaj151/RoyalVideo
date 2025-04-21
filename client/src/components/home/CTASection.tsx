@@ -37,23 +37,23 @@ export default function CTASection() {
               <div className="w-24 h-1 bg-secondary mb-8 mx-auto md:mx-0"></div>
               
               <h2 className="text-3xl md:text-5xl font-display font-bold mb-6 text-white leading-tight">
-                Preserve Your Wedding Memories <span className="text-secondary">Forever</span>
+                Royal Videography <span className="text-secondary">Dehri-on-Sone</span>
               </h2>
               
               <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-                Book your consultation today and let us capture the magic, colors, and emotions of your Indian wedding celebrations in stunning detail.
+                Book your consultation today with Ajay Sharma & Raja Sharma. We capture the magic, colors, and emotions of your wedding celebrations in stunning detail.
               </p>
               
               {/* Testimonial highlight */}
               <div className="hidden md:block">
                 <div className="flex items-center mt-8">
                   <div className="flex -space-x-2">
+                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-primary font-bold">A</div>
+                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary font-bold">R</div>
                     <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-primary font-bold">S</div>
-                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary font-bold">P</div>
-                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-primary font-bold">R</div>
                   </div>
                   <div className="ml-4">
-                    <p className="text-white/90 text-sm italic">"The best decision we made for our wedding!"</p>
+                    <p className="text-white/90 text-sm italic">"Professional photography by Ajay & Raja Sharma!"</p>
                   </div>
                 </div>
               </div>
@@ -78,11 +78,11 @@ export default function CTASection() {
                 
                 {/* Trust badges */}
                 <div className="mt-6 pt-6 border-t border-white/20 text-center">
-                  <p className="text-white/70 text-sm mb-3">Trusted by couples across India</p>
+                  <p className="text-white/70 text-sm mb-3">Based in Dehri-on-Sone, Bihar</p>
                   <div className="flex justify-center space-x-4">
-                    <div className="text-secondary"><i className="fas fa-award"></i></div>
-                    <div className="text-secondary"><i className="fas fa-certificate"></i></div>
-                    <div className="text-secondary"><i className="fas fa-star"></i></div>
+                    <div className="text-secondary"><i className="fas fa-camera-retro"></i></div>
+                    <div className="text-secondary"><i className="fas fa-video"></i></div>
+                    <div className="text-secondary"><i className="fas fa-user-tie"></i></div>
                   </div>
                 </div>
               </div>

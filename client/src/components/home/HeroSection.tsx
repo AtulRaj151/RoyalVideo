@@ -34,12 +34,12 @@ export default function HeroSection() {
           <div className="w-24 h-1 bg-secondary mx-auto mb-8"></div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 drop-shadow-lg">
-            Capture the Magic of Your <br />
-            <span className="text-secondary">Indian Wedding</span>
+            Royal <span className="text-secondary">Videography</span> <br />
+            <span className="text-3xl md:text-5xl">Dehri-on-Sone, Bihar</span>
           </h1>
           
           <p className="text-lg md:text-2xl text-white mb-10 drop-shadow-md max-w-2xl mx-auto">
-            Premium photography and videography services for your most precious celebrations
+            Premium photography and videography services by Ajay Sharma & Raja Sharma
           </p>
           
           <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center">
@@ -58,16 +58,16 @@ export default function HeroSection() {
           {/* Small highlighted feature points */}
           <div className="hidden md:flex justify-center mt-12 space-x-10">
             <div className="text-white/80 flex items-center">
-              <i className="fas fa-award text-secondary mr-2"></i>
-              <span>Award Winning</span>
+              <i className="fas fa-camera-retro text-secondary mr-2"></i>
+              <span>Professional Videography</span>
             </div>
             <div className="text-white/80 flex items-center">
-              <i className="fas fa-camera text-secondary mr-2"></i>
-              <span>Premium Equipment</span>
+              <i className="fas fa-user-tie text-secondary mr-2"></i>
+              <span>Owner: Ajay Sharma</span>
             </div>
             <div className="text-white/80 flex items-center">
-              <i className="fas fa-heart text-secondary mr-2"></i>
-              <span>100+ Happy Couples</span>
+              <i className="fas fa-phone text-secondary mr-2"></i>
+              <span>+91 8083437728, +91 8340608143</span>
             </div>
           </div>
         </div>
