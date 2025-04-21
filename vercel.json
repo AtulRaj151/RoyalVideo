@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "name": "vivahlens-wedding",
+  "builds": [
+    {
+      "src": "client/index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/client/index.html"
+    }
+  ],
+  "github": {
+    "silent": true
+  },
+  "env": {
+    "VITE_STRIPE_PUBLIC_KEY": "@vite_stripe_public_key"
+  }
+}
